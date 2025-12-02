@@ -1,5 +1,5 @@
 // Modelo de datos - Arreglo de objetos de clientes
-const clientes = [
+export const clientes = [
     {
         id: 1,
         nombre: "María García",

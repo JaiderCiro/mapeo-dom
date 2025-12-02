@@ -39,12 +39,12 @@
             </div>
         </header>
         <div class="filters">
-            <button class="filter-btn active">Todos</button>
+            <button id="listarClientes" class="filter-btn active">Todos</button>
             <button class="filter-btn">Activos</button>
             <button class="filter-btn">Inactivos</button>
             <button class="filter-btn">Pendientes</button>
         </div>
-        <div class="clientes-grid">
+        <div id="clientes-grid" class="clientes-grid">
             <div class="cliente-card">
                 <div class="card-header">
                     <div class="avatar">MG</div>
@@ -73,150 +73,11 @@
                     <button class="btn btn-secondary">Contactar</button>
                 </div>
             </div>
-            <div class="cliente-card">
-                <div class="card-header">
-                    <div class="avatar">CR</div>
-                    <span class="badge badge-activo">Activo</span>
-                </div>
-                <div class="card-body">
-                    <h3 class="cliente-nombre">Carlos Rodríguez</h3>
-                    <p class="cliente-empresa">Digital Marketing Pro</p>
-                    <div class="cliente-info">
-                        <div class="info-item">
-                            <span class="info-icon">✉</span>
-                            <span class="info-text">carlos.rodriguez@email.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">☎</span>
-                            <span class="info-text">+1 (555) 234-5678</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📆</span>
-                            <span class="info-text">Desde: 20/02/2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary">Ver Detalles</button>
-                    <button class="btn btn-secondary">Contactar</button>
-                </div>
-            </div>
-            <div class="cliente-card">
-                <div class="card-header">
-                    <div class="avatar">AM</div>
-                    <span class="badge badge-inactivo">Inactivo</span>
-                </div>
-                <div class="card-body">
-                    <h3 class="cliente-nombre">Ana Martínez</h3>
-                    <p class="cliente-empresa">Creative Design Studio</p>
-                    <div class="cliente-info">
-                        <div class="info-item">
-                            <span class="info-icon">✉</span>
-                            <span class="info-text">ana.martinez@email.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">☎</span>
-                            <span class="info-text">+1 (555) 345-6789</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📆</span>
-                            <span class="info-text">Desde: 10/11/2023</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary">Ver Detalles</button>
-                    <button class="btn btn-secondary">Contactar</button>
-                </div>
-            </div>
-            <div class="cliente-card">
-                <div class="card-header">
-                    <div class="avatar">RF</div>
-                    <span class="badge badge-activo">Activo</span>
-                </div>
-                <div class="card-body">
-                    <h3 class="cliente-nombre">Roberto Fernández</h3>
-                    <p class="cliente-empresa">Innovation Labs</p>
-                    <div class="cliente-info">
-                        <div class="info-item">
-                            <span class="info-icon">✉</span>
-                            <span class="info-text">roberto.fernandez@email.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">☎</span>
-                            <span class="info-text">+1 (555) 456-7890</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📆</span>
-                            <span class="info-text">Desde: 05/03/2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary">Ver Detalles</button>
-                    <button class="btn btn-secondary">Contactar</button>
-                </div>
-            </div>
-            <div class="cliente-card">
-                <div class="card-header">
-                    <div class="avatar">LS</div>
-                    <span class="badge badge-activo">Activo</span>
-                </div>
-                <div class="card-body">
-                    <h3 class="cliente-nombre">Laura Sánchez</h3>
-                    <p class="cliente-empresa">Global Consulting</p>
-                    <div class="cliente-info">
-                        <div class="info-item">
-                            <span class="info-icon">✉</span>
-                            <span class="info-text">laura.sanchez@email.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">☎</span>
-                            <span class="info-text">+1 (555) 567-8901</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📆</span>
-                            <span class="info-text">Desde: 28/01/2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary">Ver Detalles</button>
-                    <button class="btn btn-secondary">Contactar</button>
-                </div>
-            </div>
-            <div class="cliente-card">
-                <div class="card-header">
-                    <div class="avatar">DT</div>
-                    <span class="badge badge-pendiente">Pendiente</span>
-                </div>
-                <div class="card-body">
-                    <h3 class="cliente-nombre">Diego Torres</h3>
-                    <p class="cliente-empresa">Smart Systems</p>
-                    <div class="cliente-info">
-                        <div class="info-item">
-                            <span class="info-icon">✉</span>
-                            <span class="info-text">diego.torres@email.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">☎</span>
-                            <span class="info-text">+1 (555) 678-9012</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-icon">📆</span>
-                            <span class="info-text">Desde: 15/11/2024</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary">Ver Detalles</button>
-                    <button class="btn btn-secondary">Contactar</button>
-                </div>
-            </div>
         </div>
         <footer class="footer">
             <p>Sistema de Gestión de Clientes &copy; 2025</p>
         </footer>
     </div>
+    <script type="module" src="/controller/clienteController.js"></script>
 </body>
 </html>
