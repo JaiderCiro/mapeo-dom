@@ -25,7 +25,9 @@ function listarClientes(){
         let avatar = document.createElement("div");
         avatar.classList.add("avatar");
         avatar.textContent = cliente.nombre.split(" ").map((palabra)=> palabra[0]).join("")
-
+            .split(" ")
+            .map((palabra)=> palabra [0])
+            .join("");
         let badge = document.createElement("span");
         badge.classList.add("badge");
         badge.textContent = cliente.estado
