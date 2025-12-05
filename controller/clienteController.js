@@ -43,32 +43,42 @@ function listarClientes(){
         
         let clienteInfo = document.createElement("div");
         clienteInfo.classList.add("cliente-info");
-        clienteInfo.textContent = "📧"
-        
-        let infoItem = document.createElement("div");
-        infoItem.classList.add("info-item");
-        
-        let infoIcons = document.createElement("div");
-        infoIcons.classList.add("info-icons");
-        
-        let infoText = document.createElement("div");
-        infoText.classList.add("info-text");
-        infoText.textContent = cliente.email; 
-        
+       
+
+        const datosContacto = [
+            { icono: "📧", texto: cliente.email},
+            { icono: "📱", texto: cliente.telefono || "+1 (555) 000-0000"},
+            { icono: "🏙️", texto: 'Desde: ${cliente.fecha || "01/01/2024"}'},
+        ];
+
+        datosContacto.forEach((dato) => {
+            let infoItem = document.createElement("div");
+            infoItem.classList.add("info-item");
+
+            let infoIcons = document.createElement("span");
+            infoIcons.classList.add("info-icons");
+            infoIcons.textContent = dato.icono;
+
+            let infoText = document.createElement("span");
+            infoText.classList.add("info-text");
+            infoText.textContent = dato.texto;
+
+            infoItem.append(infoIcons, infoText);
+            clienteInfo.append(infoItem);
+        });
+
         let cardFooter = document.createElement("div");
         cardFooter.classList.add("card-footer");
-        
+            
         let btnDetalle  = document.createElement("button");
         btnDetalle.classList.add("btn", "btn-primary");
         btnDetalle.textContent = "Ver Detalles";
-        
+            
         let btnContacto  = document.createElement("button");
         btnContacto.classList.add("btn", "btn-secondary");
         btnContacto.textContent = "Contactar"
-
+       
         cardHeader.append(avatar,badge);
-        infoItem.append(infoIcons,infoText);
-        clienteInfo.append(infoItem);
         cardFooter.append(btnDetalle,btnContacto);
         cardBody.append(clienteNombre,clienteEmpresa,clienteInfo);
         clienteCard.append(cardHeader,cardBody,cardFooter);
