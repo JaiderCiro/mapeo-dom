@@ -14,36 +14,57 @@ function listarClientesPendientes() {
 }
 
 function listarClientes(){
-    clientes.map((clientes)=>{
+    clientes.map((cliente)=>{
 
         let clienteCard = document.createElement("div");
         clienteCard.classList.add("cliente-card");
+        
         let cardHeader = document.createElement("div");
         cardHeader.classList.add("card-header");
+        
         let avatar = document.createElement("div");
         avatar.classList.add("avatar");
-        let badge = document.createElement("div");
+        avatar.textContent = cliente.nombre.split(" ").map((palabra)=> palabra[0]).join("")
+
+        let badge = document.createElement("span");
         badge.classList.add("badge");
+        badge.textContent = cliente.estado
+
         let cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
+        
         let clienteNombre = document.createElement("div");
         clienteNombre.classList.add("cliente-nombre");
+        clienteNombre.textContent = cliente.nombre;
+        
         let clienteEmpresa = document.createElement("div");
         clienteEmpresa.classList.add("cliente-empresa");
+        clienteEmpresa.textContent =cliente.empresa;
+        
         let clienteInfo = document.createElement("div");
         clienteInfo.classList.add("cliente-info");
+        clienteInfo.textContent = "📧"
+        
         let infoItem = document.createElement("div");
         infoItem.classList.add("info-item");
+        
         let infoIcons = document.createElement("div");
         infoIcons.classList.add("info-icons");
+        
         let infoText = document.createElement("div");
         infoText.classList.add("info-text");
+        infoText.textContent = cliente.email; 
+        
         let cardFooter = document.createElement("div");
         cardFooter.classList.add("card-footer");
+        
         let btnDetalle  = document.createElement("button");
         btnDetalle.classList.add("btn", "btn-primary");
+        btnDetalle.textContent = "Ver Detalles";
+        
         let btnContacto  = document.createElement("button");
         btnContacto.classList.add("btn", "btn-secondary");
+        btnContacto.textContent = "Contactar"
 
         cardHeader.append(avatar,badge);
         infoItem.append(infoIcons,infoText);
